@@ -2,9 +2,9 @@
 CLI
 ```
 argocd app create --name test \
---repo https://github.com/marcel-dempers/docker-development-youtube-series \
+--repo https://github.com/pon-raj/docker-development \
 --dest-server https://kubernetes.default.svc \
---dest-namespace marcel --path kubernetes
+--dest-namespace example-app --path kubernetes
 ```
 
 YAML
@@ -18,7 +18,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/marcel-dempers/docker-development-youtube-series.git
+    repoURL: https://github.com/pon-raj/docker-development.git
     targetRevision: HEAD
     path: argo/example-app
   destination:
